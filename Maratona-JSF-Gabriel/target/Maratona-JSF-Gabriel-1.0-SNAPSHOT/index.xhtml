@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <p:importEnum type="com.mycompany.maratona.jsf.gabriel.model.enums.Turno" var="Turno" allSuffix="ALL_ENUM_VALUES "/>
+
+        <h:outputLabel value="#{estudanteRegistrarBean.nome}" /> <br/>
+        <h:outputLabel value="#{estudanteRegistrarBean['nome']}" /> <br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.sobrenome}" /><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.nota eq 10}"/><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.nota == 10}"/><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.nota == 10 and estudanteRegistrarBean.nome eq 'Gabriel'}"/><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.nota == 10 and estudanteRegistrarBean.nome.equals('Gabrielll')}"/><br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.nota le 10}"/> <br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.nota ge 11}"/> <br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.nota eq 10 ? estudanteRegistrarBean.nome : estudanteRegistrarBean.sobrenome}"/> <br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.nota lt 10 ? estudanteRegistrarBean.nome : estudanteRegistrarBean.sobrenome}"/> <br/>
+        <h:outputLabel value="#{estudanteRegistrarBean.nome += ' Olha meu código Tiagooo'}"/> <br/>
+        <p>---------------------------------------------------</p>
+        <h:outputLabel value="#{estudanteRegistrarBean1.estudante.nome}"/> <br/>
+        <h:outputLabel value="#{estudanteRegistrarBean1.estudante.turno}"/> <br/>
+        <h:outputLabel value="#{estudanteRegistrarBean1.estudante.turno eq Turno.MATUTINO}"/> <br/>
+        <p>------------------ARRAY---------------------------------</p>
+        <h:outputLabel value="#{estudanteRegistrarBean1.nomesArray[0]}"/> <br/>
+        <h:outputLabel value="#{estudanteRegistrarBean1.nomesArray[1]}"/> <br/>
+        <ui:repeat value="#{estudanteRegistrarBean1.nomesArray}" var="Nomes">
+            <h:outputLabel value="#{Nomes}"/>
+        </ui:repeat>
+        <p>------------------LIST---------------------------------</p>
+        <ui:repeat value="#{estudanteRegistrarBean1.nomesList}" var="Nomes">
+            <h:outputLabel value="#{Nomes}"/>
+        </ui:repeat>
+        
+    </h:body>
+</html>
+
