@@ -7,6 +7,7 @@
     </h:head>
     <h:body>
         <h:form>
+            <h:outputLabel value="#{testeApplicationBean.categoriaList}"/><br/>
             <h:commandButton value="Gerar Personagem" actionListener="#{testeRequestBean.selecPersonagem()}"/><br/>
             <h:outputLabel value="#{testeRequestBean.personagenSelec}"/><br/><br/>
             <h:commandButton value="Gerar Personagem Forward" 
@@ -15,6 +16,9 @@
             <h:commandButton value="Gerar Personagem Redirect" 
                              actionListener="#{testeRequestBean.selecPersonagem()}"
                              action="index2?faces-redirect=true"/><br/>
+            <h:commandButton value="Mudar Personagem da Lista" 
+                             actionListener="#{testeApplicationBean.mudarLista()}"
+                             action="session2?faces-redirect=true"/><br/>
         </h:form>
     </h:body>
 </html>

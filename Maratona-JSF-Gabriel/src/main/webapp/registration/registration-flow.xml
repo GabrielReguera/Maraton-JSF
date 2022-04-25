@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.3"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd">
+    <flow-definition id="registration">
+        <start-node>registrationInicio</start-node>
+        <view id="registrationInicio">
+            <vdl-document>/registration/registration1.xhtml</vdl-document>
+        </view>
+        <flow-return id="exitFlow">
+            <from-outcome>/inicioflow.xhtml</from-outcome>
+        </flow-return> 
+         <flow-return id="exitIndex">
+            <from-outcome>/index.xhtml</from-outcome>
+        </flow-return>
+        <finalizer>#{testeFlowBean.salvar}</finalizer>
+    </flow-definition>
+</faces-config>

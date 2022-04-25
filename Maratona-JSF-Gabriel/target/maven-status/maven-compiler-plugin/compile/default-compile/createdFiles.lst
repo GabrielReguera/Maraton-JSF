@@ -1,6 +1,12 @@
+com\mycompany\maratona\jsf\gabriel\bean\conversation\TesteConversationBean.class
+com\mycompany\maratona\jsf\gabriel\bean\flow\TesteFlowBean.class
+com\mycompany\maratona\jsf\gabriel\bean\view\TesteViewBean.class
+com\mycompany\maratona\jsf\gabriel\bean\application\TesteApplicationBean.class
+com\mycompany\maratona\jsf\gabriel\bean\session\TesteSessionBean.class
 com\mycompany\maratona\jsf\gabriel\JAXRSConfiguration.class
 com\mycompany\maratona\jsf\gabriel\resources\JavaEE8Resource.class
 com\mycompany\maratona\jsf\gabriel\model\Estudante.class
 com\mycompany\maratona\jsf\gabriel\bean\estudante\EstudanteRegistrarBean1.class
 com\mycompany\maratona\jsf\gabriel\bean\estudante\EstudanteRegistrarBean.class
+com\mycompany\maratona\jsf\gabriel\bean\request\TesteRequestBean.class
 com\mycompany\maratona\jsf\gabriel\model\enums\Turno.class
