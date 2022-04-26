@@ -4,14 +4,15 @@
  */
 package com.mycompany.maratona.jsf.gabriel.bean.view;
 
+import com.mycompany.maratona.jsf.gabriel.bean.dependent.TesteDependentBean;
 import java.io.Serializable;
 import java.util.ArrayList;
 import static java.util.Arrays.asList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 import javax.annotation.PostConstruct;
-import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
@@ -20,22 +21,35 @@ import javax.inject.Named;
  */
 @Named
 @ViewScoped
-public class TesteViewBean implements Serializable{
-    
-     private List<String> personagens;
+public class TesteViewBean implements Serializable {
+
+    private List<String> personagens;
     private List<String> personagenSelec = new ArrayList<>();
 
+    private final TesteDependentBean dependentBean;
+    
+    @Inject
+    public TesteViewBean(TesteDependentBean dependentBean) {
+        this.dependentBean = dependentBean;
+    }
+    
+    
     @PostConstruct
-    public void init(){
+    public void init() {
         personagens = asList("Mãe", "Pai", "Filho");
         System.out.println("To aqui no Post do Session");
     }
-  
+
+    public TesteDependentBean getDependentBean() {
+        return dependentBean;
+    }
+
     
     public void selecPersonagem() {
         int index = ThreadLocalRandom.current().nextInt(3);
         String personagem = personagens.get(index);
         personagenSelec.add(personagem);
+        dependentBean.getPersonagenSelec().add(personagem);
     }
 
     public List<String> getPersonagenSelec() {
@@ -45,5 +59,5 @@ public class TesteViewBean implements Serializable{
     public void setPersonagenSelec(List<String> personagenSelec) {
         this.personagenSelec = personagenSelec;
     }
-    
+
 }
