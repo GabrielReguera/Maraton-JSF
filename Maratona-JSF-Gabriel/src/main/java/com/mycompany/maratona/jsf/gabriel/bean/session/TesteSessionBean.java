@@ -4,6 +4,7 @@
  */
 package com.mycompany.maratona.jsf.gabriel.bean.session;
 
+import com.mycompany.maratona.jsf.gabriel.model.Estudante;
 import java.io.Serializable;
 import java.util.ArrayList;
 import static java.util.Arrays.asList;
@@ -12,7 +13,6 @@ import java.util.concurrent.ThreadLocalRandom;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
-import javax.faces.view.facelets.FaceletContext;
 import javax.inject.Named;
 
 /**
@@ -21,21 +21,35 @@ import javax.inject.Named;
  */
 @Named
 @SessionScoped
-public class TesteSessionBean implements Serializable{
-    
-     private List<String> personagens;
+public class TesteSessionBean implements Serializable {
+
+    private List<String> personagens;
     private List<String> personagenSelec = new ArrayList<>();
+    private Estudante estudante;
 
     @PostConstruct
-    public void init(){
+    public void init() {
         personagens = asList("Luffy", "Midoria", "Annye");
         System.out.println("To aqui no Post do Session");
+        logar();
+    }
+
+    public void logar(){
+        estudante = new Estudante();
     }
     
-    public String logout(){
+    public String logout() {
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
         return "session?faces-redirect=true";
-        
+
+    }
+
+    public Estudante getEstudante() {
+        return estudante;
+    }
+
+    public void setEstudante(Estudante estudante) {
+        this.estudante = estudante;
     }
     
     public void selecPersonagem() {
@@ -51,5 +65,5 @@ public class TesteSessionBean implements Serializable{
     public void setPersonagenSelec(List<String> personagenSelec) {
         this.personagenSelec = personagenSelec;
     }
-    
+
 }

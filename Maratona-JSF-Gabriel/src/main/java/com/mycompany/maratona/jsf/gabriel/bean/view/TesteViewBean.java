@@ -5,6 +5,7 @@
 package com.mycompany.maratona.jsf.gabriel.bean.view;
 
 import com.mycompany.maratona.jsf.gabriel.bean.dependent.TesteDependentBean;
+import com.mycompany.maratona.jsf.gabriel.bean.session.TesteSessionBean;
 import java.io.Serializable;
 import java.util.ArrayList;
 import static java.util.Arrays.asList;
@@ -27,10 +28,12 @@ public class TesteViewBean implements Serializable {
     private List<String> personagenSelec = new ArrayList<>();
 
     private final TesteDependentBean dependentBean;
-    
+    private final TesteSessionBean sessionBean;
+
     @Inject
-    public TesteViewBean(TesteDependentBean dependentBean) {
+    public TesteViewBean(TesteDependentBean dependentBean, TesteSessionBean sessionBean) {
         this.dependentBean = dependentBean;
+        this.sessionBean = sessionBean;
     }
     
     
@@ -40,6 +43,14 @@ public class TesteViewBean implements Serializable {
         System.out.println("To aqui no Post do Session");
     }
 
+    public List<String> getPersonagens() {
+        return personagens;
+    }
+
+    public void setPersonagens(List<String> personagens) {
+        this.personagens = personagens;
+    }
+    
     public TesteDependentBean getDependentBean() {
         return dependentBean;
     }

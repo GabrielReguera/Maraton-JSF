@@ -8,6 +8,8 @@
     <h:body>
         <h:form>
             <h:outputLabel value="#{testeApplicationBean.categoriaList}"/><br/>
+            <!--<h:outputLabel value="Estudante Logado: #{testeApplicationBean.sessionBean.estudante.nome}"/><br/>-->
+            <h:outputLabel value="Estudante Logado: #{testeSessionBean.estudante.nome}"/><br/>
             <h:commandButton value="Gerar Personagem" actionListener="#{testeViewBean.selecPersonagem()}"/><br/>
             <h:outputLabel value="#{testeViewBean.personagenSelec}"/><br/><br/>
             <h:outputLabel value=" Dependent: #{testeViewBean.dependentBean.personagenSelec}"/><br/><br/>

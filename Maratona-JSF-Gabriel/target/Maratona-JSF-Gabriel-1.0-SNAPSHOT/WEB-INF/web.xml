@@ -19,13 +19,27 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>faces/view.xhtml</welcome-file>
+        <welcome-file>faces/comunicacao.xhtml</welcome-file>
     </welcome-file-list>
     <context-param>
         <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
         <param-value>true</param-value>
     </context-param>
-    <error-page>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.mycompany.maratona.jsf.gabriel.filter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/faces/restricted/*</url-pattern>
+    </filter-mapping>   
+    <context-param>
+        <param-name>images.location</param-name>
+        <param-value>C:/var</param-value>
+    </context-param>
+    
+    
+    <!--    <error-page>
         <location>/error.xhtml</location>
-    </error-page>
+    </error-page>-->
 </web-app>
