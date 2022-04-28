@@ -5,6 +5,9 @@
 package com.mycompany.maratona.jsf.gabriel.model;
 
 import com.mycompany.maratona.jsf.gabriel.model.enums.Turno;
+import java.util.ArrayList;
+import static java.util.Arrays.asList;
+import java.util.List;
 import javax.inject.Named;
 
 /**
@@ -13,6 +16,7 @@ import javax.inject.Named;
  */
 @Named
 public class Estudante {
+
     private String nome = "Gabriel";
     private String sobrenome = "Lindo";
     private double nota1 = 22;
@@ -21,6 +25,24 @@ public class Estudante {
 
     private Turno turno = Turno.MATUTINO;
 
+    public Estudante() {
+    }
+
+    public Estudante(String nome, String sobrenome, double nota1) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.nota1 = nota1;
+    }
+
+    public static List<Estudante> estudanteLista() {
+        return new ArrayList<>(asList(new Estudante("julio", "senpai", 7),
+                new Estudante("Heitor", "Souza", 6),
+                new Estudante("Franco", "Pereira", 8)
+        )
+        );
+
+    }
+
     public Turno getTurno() {
         return turno;
     }
@@ -28,7 +50,7 @@ public class Estudante {
     public void setTurno(Turno turno) {
         this.turno = turno;
     }
-    
+
     public String getNome() {
         return nome;
     }
@@ -68,6 +90,5 @@ public class Estudante {
     public void setNota3(double nota3) {
         this.nota3 = nota3;
     }
-    
-    
+
 }

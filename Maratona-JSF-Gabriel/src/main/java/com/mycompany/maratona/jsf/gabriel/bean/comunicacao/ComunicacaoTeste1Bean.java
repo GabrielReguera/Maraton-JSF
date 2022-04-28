@@ -23,12 +23,12 @@ public class ComunicacaoTeste1Bean implements Serializable {
     private String nome;
     private String sobrenome;
     private Date data = new Date();
-    private String dataString;
+//    private String dataString;
 
-    @PostConstruct
-    public void init() {
-        dataString = new SimpleDateFormat("dd-MM-yyy").format(data);
-    }
+//    @PostConstruct
+//    public void init() {
+//        dataString = new SimpleDateFormat("dd-MM-yyy").format(data);
+//    }
 
     public void imprimirAtributos() {
         String initParameter = FacesContext.getCurrentInstance()
@@ -42,13 +42,13 @@ public class ComunicacaoTeste1Bean implements Serializable {
         return "comunicacao2?faces-redirect=true&nome=" + nome + "&sobrenome=" + sobrenome;
     }
 
-    public String getDataString() {
-        return dataString;
-    }
-
-    public void setDataString(String dataString) {
-        this.dataString = dataString;
-    }
+//    public String getDataString() {
+//        return dataString;
+//    }
+//
+//    public void setDataString(String dataString) {
+//        this.dataString = dataString;
+//    }
 
     public Date getData() {
         return data;

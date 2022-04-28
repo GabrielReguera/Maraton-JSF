@@ -11,7 +11,9 @@
      <f:metadata>
          <f:viewParam name="nome" value="#{comunicacaoTeste3Bean.nome}"/>
          <f:viewParam name="sobrenome" value="#{comunicacaoTeste3Bean.sobrenome}"/>
-         <f:viewParam name="data" value="#{comunicacaoTeste3Bean.data}"/>
+         <f:viewParam name="data" value="#{comunicacaoTeste3Bean.data}">
+             <f:convertDateTime pattern="dd-MM-yyyy"/>
+         </f:viewParam>
          <!--<f:event type="preRenderView" listener="#{comunicacaoTeste3Bean.init()}"/>-->
          <f:viewAction action="#{comunicacaoTeste3Bean.init()}"/>    
     </f:metadata>
