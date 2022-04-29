@@ -17,11 +17,13 @@ import javax.inject.Named;
 @Named
 public class Estudante {
 
+    private Integer id;
     private String nome = "Gabriel";
     private String sobrenome = "Lindo";
     private double nota1 = 22;
     private double nota2;
     private double nota3;
+    private String email;
 
     private Turno turno = Turno.MATUTINO;
 
@@ -33,16 +35,40 @@ public class Estudante {
         this.sobrenome = sobrenome;
         this.nota1 = nota1;
     }
+    
+    public Estudante(Integer id, String nome, String sobrenome, double nota1) {
+        this.id = id;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.nota1 = nota1;
+    }
 
     public static List<Estudante> estudanteLista() {
-        return new ArrayList<>(asList(new Estudante("julio", "senpai", 7),
-                new Estudante("Heitor", "Souza", 6),
-                new Estudante("Franco", "Pereira", 8)
+        return new ArrayList<>(asList(new Estudante(1,"julio", "senpai", 7),
+                new Estudante(2, "Heitor", "Souza", 6),
+                new Estudante(3, "Franco", "Pereira", 8)
         )
         );
 
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    
     public Turno getTurno() {
         return turno;
     }

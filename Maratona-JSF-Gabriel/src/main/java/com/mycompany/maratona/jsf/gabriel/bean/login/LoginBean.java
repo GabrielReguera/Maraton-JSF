@@ -6,6 +6,7 @@ package com.mycompany.maratona.jsf.gabriel.bean.login;
 
 import com.mycompany.maratona.jsf.gabriel.model.Estudante;
 import java.io.Serializable;
+import java.util.ResourceBundle;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -24,6 +25,7 @@ public class LoginBean implements Serializable {
     private Estudante estudante;
 
     public String logar() {
+//        ResourceBundle resource = ResourceBundle.getBundle("com.mycompany.maratona.jsf.gabriel.resources/messages");
         if (nome.equals("w") && senha.equals("1")) {
             estudante = new Estudante();
             return "/restricted/iniciosistema.xhtml?faces-redirect=true";

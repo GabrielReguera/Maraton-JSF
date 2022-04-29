@@ -13,11 +13,15 @@ C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\jav
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\conversation\TesteConversationBean.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\JAXRSConfiguration.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\flow\TesteFlowBean.java
+C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste11Bean.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste3Bean.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste6Bean.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\estudante\EstudanteRegistrarBean.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoResultadoTesteBean.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\flowbuilder\NewRegistrationFlowBuilder.java
+C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\util\ApplicationMapUtil.java
+C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste10Bean.java
+C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste9Bean.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\login\LoginBean.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\application\TesteApplicationBean.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\flowbuilder\TesteFlowBuilderNestedBean.java
@@ -25,5 +29,6 @@ C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\jav
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste4Bean.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste2Bean.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\flowbuilder\TesteFlowBuilderBean.java
+C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste12Bean.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste7Bean.java
 C:\Users\GestaoTech\Documents\NetBeansProjects\Maratona-JSF-Gabriel\src\main\java\com\mycompany\maratona\jsf\gabriel\resources\JavaEE8Resource.java

@@ -13,8 +13,16 @@
         <f:viewAction action="#{comunicacaoTeste12Bean.init()}"/>
     </f:metadata>
     <h:body>
+        <p:messages>
+            <p:autoUpdate/>
+        </p:messages>
         <h:outputText value="#{comunicacaoTeste12Bean.estudante.nome}"/><br/>
         <h:outputText value="#{comunicacaoTeste12Bean.estudante.sobrenome}"/><br/>
+        <h:form>
+            <h:inputText value="#{comunicacaoTeste12Bean.estudante2.nome}" converter="javax.faces.Number"/>
+            <h:inputText value="#{comunicacaoTeste12Bean.estudante2.sobrenome}" converter="javax.faces.BigDecimal"/>
+            <h:commandButton value="Voltar" action="#{comunicacaoTeste12Bean.voltar()}" immediate="true"/>
+        </h:form>
     </h:body>
 </html>
 

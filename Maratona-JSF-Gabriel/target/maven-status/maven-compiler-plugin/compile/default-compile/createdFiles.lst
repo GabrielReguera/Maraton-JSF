@@ -1,8 +1,10 @@
 com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste4Bean.class
+com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste10Bean.class
 com\mycompany\maratona\jsf\gabriel\bean\conversation\TesteConversationBean.class
 com\mycompany\maratona\jsf\gabriel\bean\application\TesteApplicationBean.class
 com\mycompany\maratona\jsf\gabriel\bean\session\TesteSessionBean.class
 com\mycompany\maratona\jsf\gabriel\flowbuilder\NewRegistrationFlowBuilder.class
+com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste9Bean.class
 com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoResultadoTesteBean.class
 com\mycompany\maratona\jsf\gabriel\flowbuilder\NewPendenciesFlowBuilder.class
 com\mycompany\maratona\jsf\gabriel\model\enums\Turno.class
@@ -13,11 +15,13 @@ com\mycompany\maratona\jsf\gabriel\bean\flow\TesteFlowNestedBean.class
 com\mycompany\maratona\jsf\gabriel\bean\flow\TesteFlowBean.class
 com\mycompany\maratona\jsf\gabriel\bean\view\TesteViewBean.class
 com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste3Bean.class
+com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste11Bean.class
 com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste5Bean.class
 com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste8Bean.class
 com\mycompany\maratona\jsf\gabriel\JAXRSConfiguration.class
 com\mycompany\maratona\jsf\gabriel\resources\JavaEE8Resource.class
 com\mycompany\maratona\jsf\gabriel\model\Estudante.class
+com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste12Bean.class
 com\mycompany\maratona\jsf\gabriel\bean\estudante\EstudanteRegistrarBean1.class
 com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste6Bean.class
 com\mycompany\maratona\jsf\gabriel\bean\estudante\EstudanteRegistrarBean.class
@@ -27,3 +31,4 @@ com\mycompany\maratona\jsf\gabriel\bean\flowbuilder\TesteFlowBuilderBean.class
 com\mycompany\maratona\jsf\gabriel\bean\comunicacao\ComunicacaoTeste1Bean.class
 com\mycompany\maratona\jsf\gabriel\bean\flowbuilder\TesteFlowBuilderNestedBean.class
 com\mycompany\maratona\jsf\gabriel\filter\LoginFilter.class
+com\mycompany\maratona\jsf\gabriel\util\ApplicationMapUtil.class
