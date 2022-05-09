@@ -26,6 +26,7 @@ public class Estudante implements Serializable {
     private double nota2;
     private double nota3;
     private String email;
+    private transient boolean editing;
 
     private Turno turno = Turno.MATUTINO;
 
@@ -55,6 +56,13 @@ public class Estudante implements Serializable {
     }
 
     @Override
+    public String toString() {
+        return "Estudante{" + "nome=" + nome + ", sobrenome=" + sobrenome + ", email=" + email + ", turno=" + turno + '}';
+    }
+
+    
+    
+    @Override
     public int hashCode() {
         int hash = 7;
         hash = 83 * hash + Objects.hashCode(this.id);
@@ -79,6 +87,16 @@ public class Estudante implements Serializable {
         return true;
     }
 
+    public boolean isEditing() {
+        return editing;
+    }
+
+    public void setEditing(boolean editing) {
+        this.editing = editing;
+    }
+
+    
+    
     public Integer getId() {
         return id;
     }

@@ -7,7 +7,7 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
-        <title>DataBase</title>
+        <title>DataTable</title>
     </h:head>
     <f:metadata>
         <f:viewAction action="#{dataTableTestBean.init()}"/>
@@ -19,12 +19,28 @@
         <h:form>
             <h:dataTable value="#{dataTableTestBean.estudantelist}" var="estudantee">
                 <h:column>
-                    <f:facet name="header">Nome</f:facet>
-                    <h:outputText value="#{estudantee.nome}"/>
+                    <f:facet name="header">
+                        <h:commandLink actionListener="#{dataTableTestBean.orderByNome('asc')}">
+                            Nome asc
+                        </h:commandLink>
+                        <h:commandLink actionListener="#{dataTableTestBean.orderByNome('desc')}">
+                            Nome desc
+                        </h:commandLink>
+                    </f:facet>
+                    <h:outputText value="#{estudantee.nome}" rendered="#{not estudante.editing}"/>
+                    <h:inputText value="#{estudantee.nome}" rendered="#{estudante.editing}"/>
                 </h:column>
                 <h:column>
-                    <f:facet name="header">SobreNome</f:facet>
-                    <h:outputText value="#{estudantee.sobrenome}"/>
+                    <f:facet name="header">
+                        <h:commandLink actionListener="#{dataTableTestBean.orderBySobrenome('asc')}">
+                            Sobrenome asc
+                        </h:commandLink>
+                        <h:commandLink actionListener="#{dataTableTestBean.orderBySobrenome('desc')}">
+                            Sobrenome desc
+                        </h:commandLink>
+                    </f:facet>
+                    <h:outputText value="#{estudantee.sobrenome}" rendered="#{not estudante.editing}"/>
+                    <h:inputText value="#{estudantee.sobrenome}" rendered="#{estudante.editing}"/>
                 </h:column>
                 <h:column>
                     <f:facet name="header">Turno</f:facet>
@@ -33,6 +49,18 @@
                 <h:column>
                     <f:facet name="header">Email</f:facet>
                     <h:outputText value="#{estudantee.email}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"></f:facet>
+                    <h:commandLink actionListener="#{dataTableTestBean.remove(estudantee)}" rendered="#{not estudante.editing}">
+                        <h:outputText value="Remover"/>
+                    </h:commandLink>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"></f:facet>
+                    <h:commandLink actionListener="#{dataTableTestBean.edit(estudantee)}" rendered="#{not estudante.editing}">
+                        <h:outputText value="Editar"/>
+                    </h:commandLink>
                 </h:column>
             </h:dataTable>
             <h:dataTable value="#{dataTableTestBean.mapEstudanteList.values()}" var="estudantee">
@@ -51,6 +79,9 @@
                 <h:column>
                     <f:facet name="header">Email</f:facet>
                     <h:outputText value="#{estudantee.email}"/>
+                </h:column>
+                <h:column>
+
                 </h:column>
             </h:dataTable>
             <h:dataTable value="#{dataTableTestBean.mapEstudanteList.keySet()}" var="string">
