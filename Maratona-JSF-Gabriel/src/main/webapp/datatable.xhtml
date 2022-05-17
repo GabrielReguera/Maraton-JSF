@@ -13,6 +13,8 @@
         <f:viewAction action="#{dataTableTestBean.init()}"/>
     </f:metadata>
     <h:body>
+        <p:importEnum type="com.mycompany.maratona.jsf.gabriel.model.enums.Turno" var="Turno"
+                  allSuffix="ALL_ENUM_VALUES"/>
         <p:messages>
             <p:autoUpdate/>
         </p:messages>
@@ -27,8 +29,8 @@
                             Nome desc
                         </h:commandLink>
                     </f:facet>
-                    <h:outputText value="#{estudantee.nome}" rendered="#{not estudante.editing}"/>
-                    <h:inputText value="#{estudantee.nome}" rendered="#{estudante.editing}"/>
+                    <h:outputText value="#{estudantee.nome}" rendered="#{not estudantee.editing}"/>
+                    <h:inputText value="#{estudantee.nome}" rendered="#{estudantee  .editing}"/>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
@@ -39,30 +41,32 @@
                             Sobrenome desc
                         </h:commandLink>
                     </f:facet>
-                    <h:outputText value="#{estudantee.sobrenome}" rendered="#{not estudante.editing}"/>
-                    <h:inputText value="#{estudantee.sobrenome}" rendered="#{estudante.editing}"/>
+                    <h:outputText value="#{estudantee.sobrenome}" rendered="#{not estudantee.editing}"/>
+                    <h:inputText value="#{estudantee.sobrenome}" rendered="#{estudantee.editing}"/>
                 </h:column>
                 <h:column>
                     <f:facet name="header">Turno</f:facet>
-                    <h:outputText value="#{estudantee.turno}"/>
+                    <h:outputText value="#{estudantee.turno}" rendered="#{not estudantee.editing}"/>
                 </h:column>
                 <h:column>
                     <f:facet name="header">Email</f:facet>
-                    <h:outputText value="#{estudantee.email}"/>
+                    <h:outputText value="#{estudantee.email}" rendered="#{not estudantee.editing}"/>
+                    <h:inputText value="#{estudantee.email}" rendered="#{estudantee.editing}"/>
                 </h:column>
                 <h:column>
                     <f:facet name="header"></f:facet>
-                    <h:commandLink actionListener="#{dataTableTestBean.remove(estudantee)}" rendered="#{not estudante.editing}">
+                    <h:commandLink actionListener="#{dataTableTestBean.remove(estudantee)}" rendered="#{not estudantee.editing}">
                         <h:outputText value="Remover"/>
                     </h:commandLink>
                 </h:column>
                 <h:column>
                     <f:facet name="header"></f:facet>
-                    <h:commandLink actionListener="#{dataTableTestBean.edit(estudantee)}" rendered="#{not estudante.editing}">
+                    <h:commandLink actionListener="#{dataTableTestBean.edit(estudantee)}" rendered="#{not estudantee.editing}">
                         <h:outputText value="Editar"/>
                     </h:commandLink>
                 </h:column>
             </h:dataTable>
+            <h:commandButton value="salvar" actionListener="#{dataTableTestBean.save()}"/>
             <h:dataTable value="#{dataTableTestBean.mapEstudanteList.values()}" var="estudantee">
                 <h:column>
                     <f:facet name="header">Nome</f:facet>

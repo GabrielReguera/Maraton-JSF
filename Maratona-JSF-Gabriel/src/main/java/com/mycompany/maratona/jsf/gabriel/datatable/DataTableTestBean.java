@@ -10,6 +10,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
@@ -21,6 +22,7 @@ import javax.inject.Named;
 @ViewScoped
 public class DataTableTestBean implements Serializable {
 
+    private Consumer<Estudante> estudante;
     private List<Estudante> estudantelist = Estudante.estudanteLista();
     private Map<String, Estudante> mapEstudanteList = new HashMap<>();
 
@@ -47,6 +49,15 @@ public class DataTableTestBean implements Serializable {
         }
     }
 
+    public Consumer<Estudante> getEstudante() {
+        return estudante;
+    }
+
+    public void setEstudante(Consumer<Estudante> estudante) {
+        this.estudante = estudante;
+    }
+
+    
     public void remove(Estudante estudante) {
         estudantelist.remove(estudante);
     }
