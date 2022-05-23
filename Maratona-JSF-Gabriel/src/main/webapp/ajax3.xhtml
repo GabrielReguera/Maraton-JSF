@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Ajax 2</title>
+    </h:head>
+    <h:body>
+        <p:messages>
+            <p:autoUpdate/>
+        </p:messages>
+        <!--<f:event type="preRenderView" listener="#{ajaxTesteBean.init}"/>-->
+        <f:metadata>
+            <f:viewAction action="#{ajaxTesteBean.init()}"/>
+        </f:metadata>
+        <h:form>
+            <h:panelGrid columns="1">
+                <h:inputText value="#{ajaxTesteBean.nome}" id="nome" required="true">
+                    <f:ajax event="keyup" listener="#{ajaxTesteBean.upperCase()}" render="nomeout"
+                            delay="1000"/>
+                </h:inputText>
+                <h:outputText id="nomeout" value="#{ajaxTesteBean.nome}"/>
+                <h:commandButton value="Enviar"/>
+
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

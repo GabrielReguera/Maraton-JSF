@@ -16,6 +16,25 @@
                 </h:commandButton> 
                 <h:outputText value="#{ajaxTesteBean.nome}" id="nomeout"/>
                 <h:outputText value="#{ajaxTesteBean.sobrenome}" id="sobrenomeout"/>
+                <h:inputText value="#{ajaxTesteBean.nome}">
+                    <f:ajax event="keyup" listener="#{ajaxTesteBean.upperCase()}"
+                            render="@this nomeout"/>
+                </h:inputText>
+                <h:inputText value="#{ajaxTesteBean.nome}">
+                    <f:ajax event="blur" listener="#{ajaxTesteBean.upperCase()}"
+                            render="@this nomeout"/>
+                </h:inputText>
+                <h:selectOneMenu value="#{ajaxTesteBean.animeSelecionado}">
+                    <f:selectItem value="#{null}" itemLabel="Selecione um Anime"/>
+                    <f:selectItems value="#{ajaxTesteBean.mapAnime.keySet()}"
+                                   var="anime" itemLabel="#{anime}" itemValue="#{anime}"/>
+                    <f:ajax event="change" listener="#{ajaxTesteBean.onSelectAnime()}" render="personagem"/>
+                </h:selectOneMenu>
+                <h:selectOneMenu id="personagem" value="#{ajaxTesteBean.personagemSelecionado}">
+                    <f:selectItem value="#{null}" itemLabel="Selecione um Anime"/>
+                    <f:selectItems value="#{ajaxTesteBean.personagens}"
+                                   var="personagens" itemLabel="#{personagens}" itemValue="#{personagens}"/>
+                </h:selectOneMenu>
             </h:panelGrid>
         </h:form>
     </h:body>
